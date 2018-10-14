@@ -1,0 +1,13 @@
+# Rule for Lenovo ultraslim combo
+
+ACTION!="add", GOTO="hp_keyboard_rules_end"
+
+SUBSYSTEM=="usb_device", GOTO="hp_keyboard_usb_begin"
+SUBSYSTEM=="usb", KERNEL!="*:*", GOTO="hp_keyboard_usb_begin"
+GOTO="hp_keyboard_rules_end"
+
+LABEL="hp_keyboard_usb_begin"
+
+ATTRS{idVendor}=="0461", ATTRS{idProduct}=="4e90", RUN+="/bin/bash /usr/local/bin/hp_keyboard.sh &"
+
+LABEL="hp_keyboard_rules_end"
