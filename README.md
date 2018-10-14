@@ -8,7 +8,7 @@ Test purpose not commercial
     Copy kbdusb and hp_keyboard.sh to /usr/local/bin
     Copy 85-hp-keyboard.rules to the udev rules directly, on Ubuntu 16.04 anf higher, it is /lib/udev/rules.d/
     reload udev rules with: udevadm control --reload-rules
-    plug the dongle and it should work...
+    and it should work...
 
 # If not working
 
